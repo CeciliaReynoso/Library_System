@@ -154,7 +154,7 @@ Este proyecto está bajo la Licencia MIT.
 
 **Cecilia Reynoso**
 - GitHub: [@CeciliaReynoso](https://github.com/CeciliaReynoso)
-- LinkedIn: [Tu Perfil](https://linkedin.com/in/tu-perfil)
+- LinkedIn: [Ana Cecilia Reynoso Moreno](https://www.linkedin.com/in/ana-cecilia-reynoso-moreno-cpc-acda-3254b659/)
 
 ---
 
