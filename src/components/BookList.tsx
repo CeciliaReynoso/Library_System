@@ -25,8 +25,8 @@ export function BookList() {
   const librosDisponibles = libros.filter(libro => libro.disponible).length;
 
   return (
-    <div className="min-h-screen bg-gray-50 p-4">
-      <div className="max-w-7xl mx-auto">
+    <div className="min-h-screen bg-gray-50 p-6">
+      <div className="max-w-[1200px] mx-auto px-4">
         {/* Header */}
         <div className="text-center mb-8">
           <h1 className="text-4xl font-bold text-gray-900 mb-2">
@@ -37,18 +37,18 @@ export function BookList() {
           </p>
           
           {/* Estadísticas */}
-          <div className="flex justify-center space-x-6 mt-6">
-            <div className="bg-white rounded-lg p-4 shadow-sm border">
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-6 mt-6 max-w-xs sm:max-w-none mx-auto">
+            <div className="bg-white rounded-lg p-4 shadow-sm border min-h-[80px] flex flex-col justify-center items-center">
               <div className="text-2xl font-bold text-blue-600">{totalLibros}</div>
-              <div className="text-sm text-gray-600">Total de libros</div>
+              <div className="text-sm text-gray-600 text-center">Total de libros</div>
             </div>
-            <div className="bg-white rounded-lg p-4 shadow-sm border">
+            <div className="bg-white rounded-lg p-4 shadow-sm border min-h-[80px] flex flex-col justify-center items-center">
               <div className="text-2xl font-bold text-green-600">{librosDisponibles}</div>
-              <div className="text-sm text-gray-600">Disponibles</div>
+              <div className="text-sm text-gray-600 text-center">Disponibles</div>
             </div>
-            <div className="bg-white rounded-lg p-4 shadow-sm border">
+            <div className="bg-white rounded-lg p-4 shadow-sm border min-h-[80px] flex flex-col justify-center items-center">
               <div className="text-2xl font-bold text-red-600">{totalLibros - librosDisponibles}</div>
-              <div className="text-sm text-gray-600">Prestados</div>
+              <div className="text-sm text-gray-600 text-center">Prestados</div>
             </div>
           </div>
         </div>
@@ -115,13 +115,14 @@ export function BookList() {
               </p>
             </div>
           ) : (
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+            <div className="flex flex-wrap gap-6 justify-center">
               {librosFiltrados.map(libro => (
-                <BookCard 
-                  key={libro.id} 
-                  libro={libro} 
-                  onCambiarEstado={handleCambiarEstado}
-                />
+                <div className="w-[320px]" key={libro.id}>
+                  <BookCard 
+                    libro={libro} 
+                    onCambiarEstado={handleCambiarEstado}
+                  />
+                </div>
               ))}
             </div>
           )}

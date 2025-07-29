@@ -57,6 +57,27 @@ export const autoresEjemplo: Autor[] = [
     nombre: "Isabel",
     apellido: "Allende",
     nacionalidad: "Chilena"
+  },
+  {
+    id: 3,
+    nombre: "Mario",
+    apellido: "Vargas Llosa",
+    nacionalidad: "Peruana",
+    fechaNacimiento: "1936-03-28"
+  },
+  {
+    id: 4,
+    nombre: "Jorge Luis",
+    apellido: "Borges",
+    nacionalidad: "Argentina",
+    fechaNacimiento: "1899-08-24"
+  },
+  {
+    id: 5,
+    nombre: "Octavio",
+    apellido: "Paz",
+    nacionalidad: "Mexicana",
+    fechaNacimiento: "1914-03-31"
   }
 ];
 
@@ -98,5 +119,44 @@ export const librosEjemplo: Libro[] = [
     calificacion: 4,
     disponible: true,
     imagenUrl: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=300&h=400&fit=crop&crop=center"
+  },
+  {
+    id: 4,
+    titulo: "La ciudad y los perros",
+    isbn: "978-84-376-0496-1",
+    autor: autoresEjemplo[2],
+    genero: GeneroLibro.FICCION,
+    año: 1963,
+    paginas: 414,
+    estado: "disponible",
+    calificacion: 4,
+    disponible: true,
+    imagenUrl: "https://images.unsplash.com/photo-1512820790803-83ca734da794?w=300&h=400&fit=crop&crop=center"
+  },
+  {
+    id: 5,
+    titulo: "El Aleph",
+    isbn: "978-84-376-0497-8",
+    autor: autoresEjemplo[3],
+    genero: GeneroLibro.FICCION,
+    año: 1949,
+    paginas: 224,
+    estado: "reservado",
+    calificacion: 5,
+    disponible: false,
+    imagenUrl: "https://images.unsplash.com/photo-1519904981063-b0cf448d479e?w=300&h=400&fit=crop&crop=center"
+  },
+  {
+    id: 6,
+    titulo: "El laberinto de la soledad",
+    isbn: "978-84-376-0498-5",
+    autor: autoresEjemplo[4],
+    genero: GeneroLibro.NO_FICCION,
+    año: 1950,
+    paginas: 352,
+    estado: "disponible",
+    calificacion: 4,
+    disponible: true,
+    imagenUrl: "https://images.unsplash.com/photo-1495640388908-05fa85288e61?w=300&h=400&fit=crop&crop=center"
   }
 ];
