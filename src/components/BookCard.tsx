@@ -29,7 +29,7 @@ export function BookCard({ libro, onCambiarEstado }: BookCardProps) {
   };
 
   return (
-    <div className="bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 overflow-hidden">
+    <div className="bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 overflow-hidden flex flex-col h-full">
       {/* Imagen del libro */}
       <div className="h-48 bg-gray-200 overflow-hidden">
         {libro.imagenUrl ? (
@@ -46,7 +46,7 @@ export function BookCard({ libro, onCambiarEstado }: BookCardProps) {
       </div>
 
       {/* Contenido de la tarjeta */}
-      <div className="p-4">
+      <div className="p-4 flex flex-col flex-1">
         {/* Título */}
         <h3 className="text-lg font-bold text-gray-900 mb-2 line-clamp-2">
           {libro.titulo}
@@ -83,7 +83,7 @@ export function BookCard({ libro, onCambiarEstado }: BookCardProps) {
         )}
 
         {/* Estado y acciones */}
-        <div className="flex items-center justify-between">
+        <div className="flex items-center justify-between mt-auto">
           <span 
             className={`px-2 py-1 text-xs font-medium rounded-md border ${getEstadoColor(libro.estado)}`}
           >
